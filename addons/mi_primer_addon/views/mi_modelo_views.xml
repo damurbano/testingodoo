@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mi_modelo_tree" model="ir.ui.view">
+        <field name="name">mi.primer.modelo.tree</field>
+        <field name="model">mi.primer.modelo</field>
+        <field name="arch" type="xml">
+            <tree string="Registros de Ejemplo">
+                <field name="name"/>
+                <field name="descripcion"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_mi_modelo_form" model="ir.ui.view">
+        <field name="name">mi.primer.modelo.form</field>
+        <field name="model">mi.primer.modelo</field>
+        <field name="arch" type="xml">
+            <form string="Registro de Ejemplo">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mi_modelo" model="ir.actions.act_window">
+        <field name="name">Mis Registros de Ejemplo</field>
+        <field name="res_model">mi.primer.modelo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mi_addon_root" name="Mi Addon" sequence="10"/>
+
+    <menuitem id="menu_mi_modelo" name="Registros de Ejemplo" parent="menu_mi_addon_root" action="action_mi_modelo"/>
+</odoo>
