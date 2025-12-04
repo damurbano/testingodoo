@@ -7,3 +7,6 @@ class MiModelo(models.Model):
 
     name = fields.Char(string="Nombre", required=True)
     descripcion = fields.Text(string="Descripcion")
+
+
+#asd
